@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top Promos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom, #0a0a23, #1a1a40);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem); /* responsivo */
+  margin-bottom: 1rem;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  text-wrap: balance; /* melhora distribuição em linhas, se suportado */
+}
+
+    p.description {
+      max-width: 600px;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      color: #d1d5db;
+    }
+
+    .card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background-color: #121232;
+      border: 2px solid white;
+      border-radius: 16px;
+      padding: 1rem;
+      margin: 1rem auto;
+      max-width: 400px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card img {
+      width: 64px;
+      height: 64px;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .whatsapp {
+      border-color: #25D366;
+      background-color: rgba(37, 211, 102, 0.1);
+    }
+
+    .whatsapp:hover {
+      box-shadow: 0 0 30px rgba(37, 211, 102, 0.4);
+    }
+
+    .instagram {
+      border-color: #d62976;
+      background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    }
+
+    .instagram:hover {
+      box-shadow: 0 0 30px rgba(214, 41, 118, 0.4);
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.875rem;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 TOP PROMOS 🎉</h1>
+  <p class="description">
+    Venha aproveitar! Os melhores cupons e ofertas estão no nosso grupo de <strong>WhatsApp</strong>, totalmente grátis. 
+    É só entrar e começar a economizar!
+  </p>
+
+  <div class="card whatsapp" onclick="window.open('https://chat.whatsapp.com/GyhdbbtVkahHYg0SLwJjgu', '_blank')">
+    <img src="image-removebg-preview.png" alt="Logo" />
+    <div>
+      <p><strong>CLIQUE AQUI E ECONOMIZE</strong></p>
+      <p style="font-size: 0.9rem; color: #ccc;">Entre no grupo do WhatsApp</p>
+    </div>
+  </div>
+
+  <div class="card instagram" onclick="window.open('https://www.instagram.com/mlivr_e/', '_blank')">
+    <img src="image-removebg-preview.png" alt="Logo" />
+    <div>
+      <p><strong>Veja as ofertas do nosso Instagram</strong></p>
+      <p style="font-size: 0.9rem; color: #eee;">Posts que já passaram no grupo</p>
+    </div>
+  </div>
+
+  <footer>
+    A sua chance de treinar barato. Venha com a Top Promos.
+  </footer>
+</body>
+</html>
