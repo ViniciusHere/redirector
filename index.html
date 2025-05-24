@@ -8,6 +8,17 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R1RZ7DSNJS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-R1RZ7DSNJS');
+  </script>
+
   <style>
     body {
       margin: 0;
@@ -167,13 +178,27 @@
       <strong>Totalmente gratuito.</strong> Sem spam. Só economia.
     </p>
 
-    <a class="cta-button" href="https://seulink.com/aqui" target="_blank">
-      <i class="fab fa-whatsapp"></i> ENTRAR AGORA NO WHATSAPP
+    <a
+      class="cta-button"
+      href="https://chat.whatsapp.com/GyhdbbtVkahHYg0SLwJjgu"
+      target="_blank"
+      id="btn-whatsapp"
+      > <i class="fab fa-whatsapp"></i> ENTRAR AGORA NO WHATSAPP
     </a>
 
     <div class="subinfo">
       Mais de 500 pessoas já estão economizando. E você?
     </div>
   </div>
+
+  <script>
+    // Evento de clique para enviar ao Google Analytics
+    document.getElementById('btn-whatsapp').addEventListener('click', function() {
+      gtag('event', 'click_whatsapp_group', {
+        'event_category': 'engagement',
+        'event_label': 'botao_entrar_grupo_whatsapp'
+      });
+    });
+  </script>
 </body>
 </html>
