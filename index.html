@@ -3,119 +3,177 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Top Promos</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <title>Top Promos - Cupons Exclusivos</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
       box-sizing: border-box;
     }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom, #0a0a23, #1a1a40);
-      color: white;
-      min-height: 100vh;
+    .img {
+      width: 30%;
+      margin: 0 auto 30px auto;
+    }
+
+    .img img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .container {
+      max-width: 600px;
+      padding: 0 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      padding: 2rem;
-      text-align: center;
     }
 
     h1 {
-  font-size: clamp(1.5rem, 5vw, 2.5rem); /* responsivo */
-  margin-bottom: 1rem;
-  max-width: 100%;
-  overflow-wrap: break-word;
-  word-break: break-word;
-  text-wrap: balance; /* melhora distribuição em linhas, se suportado */
-}
-
-    p.description {
-      max-width: 600px;
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
-      color: #d1d5db;
+      font-size: 2.5em;
+      margin-bottom: 35px;
+      margin-left: 0;
+      white-space: normal;
     }
 
-    .card {
-      display: flex;
+    p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      background-color: #fdda00;
+      color: #000;
+      font-weight: bold;
+      padding: 15px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      font-size: 1em;
       align-items: center;
-      gap: 1rem;
-      background-color: #121232;
-      border: 2px solid white;
-      border-radius: 16px;
-      padding: 1rem;
-      margin: 1rem auto;
-      max-width: 400px;
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      justify-content: center;
+      gap: 10px;
+      max-width: 100%;
+      box-sizing: border-box;
     }
 
-    .card img {
-      width: 64px;
-      height: 64px;
+    .cta-button i {
+      color: #25d366;
+      font-size: 30px;
+      margin: 0;
     }
 
-    .card:hover {
+    .cta-button:hover {
       transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
     }
 
-    .whatsapp {
-      border-color: #25D366;
-      background-color: rgba(37, 211, 102, 0.1);
+    .subinfo {
+      font-size: 0.95em;
+      color: #ccc;
+      margin-top: 20px;
     }
 
-    .whatsapp:hover {
-      box-shadow: 0 0 30px rgba(37, 211, 102, 0.4);
+    strong {
+      color: #fdda00;
     }
 
-    .instagram {
-      border-color: #d62976;
-      background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    /* RESPONSIVE */
+
+    @media (max-width: 768px) {
+      .img {
+        width: 50%;
+        margin-bottom: 25px;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      p {
+        font-size: 1.1em;
+      }
+
+      .cta-button {
+        font-size: 0.95em;
+        padding: 12px 25px;
+      }
+
+      .cta-button i {
+        font-size: 25px;
+      }
     }
 
-    .instagram:hover {
-      box-shadow: 0 0 30px rgba(214, 41, 118, 0.4);
-    }
+    @media (max-width: 480px) {
+      .img {
+        width: 70%;
+        margin-bottom: 20px;
+      }
 
-    footer {
-      margin-top: 3rem;
-      font-size: 0.875rem;
-      color: #9ca3af;
+      h1 {
+        font-size: 1.6em;
+        margin-bottom: 25px;
+      }
+
+      p {
+        font-size: 1em;
+        margin-bottom: 25px;
+      }
+
+      .cta-button {
+        font-size: 0.9em;
+        padding: 12px 20px;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .cta-button i {
+        font-size: 28px;
+        margin: 0;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>🎉 TOP PROMOS 🎉</h1>
-  <p class="description">
-    Venha aproveitar! Os melhores cupons e ofertas estão no nosso grupo de <strong>WhatsApp</strong>, totalmente grátis. 
-    É só entrar e começar a economizar!
-  </p>
+  <div class="img">
+    <img src="./image-removebg-preview.png" alt="Logo Top Promos" />
+  </div>
+  <div class="container">
+    <h1>🎉 GRUPO VIP DE PROMOÇÕES 🎉</h1>
+    <p>
+      Ganhe acesso exclusivo a <strong>cupons e ofertas reais</strong>, testadas e com
+      <strong>descontos de até 80%</strong> em lojas como Amazon, Shopee e Magalu.
+      <br /><br />
+      <strong>Totalmente gratuito.</strong> Sem spam. Só economia.
+    </p>
 
-  <div class="card whatsapp" onclick="window.open('https://chat.whatsapp.com/GyhdbbtVkahHYg0SLwJjgu', '_blank')">
-    <img src="image-removebg-preview.png" alt="Logo" />
-    <div>
-      <p><strong>CLIQUE AQUI E ECONOMIZE</strong></p>
-      <p style="font-size: 0.9rem; color: #ccc;">Entre no grupo do WhatsApp</p>
+    <a class="cta-button" href="https://seulink.com/aqui" target="_blank">
+      <i class="fab fa-whatsapp"></i> ENTRAR AGORA NO WHATSAPP
+    </a>
+
+    <div class="subinfo">
+      Mais de 500 pessoas já estão economizando. E você?
     </div>
   </div>
-
-  <div class="card instagram" onclick="window.open('https://www.instagram.com/mlivr_e/', '_blank')">
-    <img src="image-removebg-preview.png" alt="Logo" />
-    <div>
-      <p><strong>Veja as ofertas do nosso Instagram</strong></p>
-      <p style="font-size: 0.9rem; color: #eee;">Posts que já passaram no grupo</p>
-    </div>
-  </div>
-
-  <footer>
-    A sua chance de treinar barato. Venha com a Top Promos.
-  </footer>
 </body>
 </html>
