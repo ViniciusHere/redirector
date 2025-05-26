@@ -15,14 +15,13 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-R1RZ7DSNJS');
   </script>
 
   <style>
     body {
       margin: 0;
-      padding: 0;
+      padding: 0 0 40px 0;
       font-family: Arial, sans-serif;
       background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
       color: white;
@@ -32,7 +31,6 @@
       align-items: center;
       min-height: 100vh;
       text-align: center;
-      padding: 20px;
       box-sizing: border-box;
     }
 
@@ -60,7 +58,6 @@
     h1 {
       font-size: 2.5em;
       margin-bottom: 35px;
-      margin-left: 0;
       white-space: normal;
     }
 
@@ -78,25 +75,38 @@
       padding: 15px 30px;
       border-radius: 8px;
       text-decoration: none;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 0 10px #fdda00;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       font-size: 1em;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      max-width: 100%;
-      box-sizing: border-box;
+      animation: pulseGlow 1.8s infinite;
     }
 
     .cta-button i {
       color: #25d366;
-      font-size: 30px;
-      margin: 0;
+      font-size: 28px;
     }
 
     .cta-button:hover {
       transform: scale(1.05);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 20px #fdda00;
+    }
+
+    @keyframes pulseGlow {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 8px #fdda00;
+      }
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px #fdda00;
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 8px #fdda00;
+      }
     }
 
     .subinfo {
@@ -109,8 +119,7 @@
       color: #fdda00;
     }
 
-    /* RESPONSIVE */
-
+    /* RESPONSIVO */
     @media (max-width: 768px) {
       .img {
         width: 50%;
@@ -156,11 +165,11 @@
         padding: 12px 20px;
         flex-direction: column;
         gap: 8px;
+        margin-top: 15px;
       }
 
       .cta-button i {
         font-size: 28px;
-        margin: 0;
       }
     }
   </style>
@@ -170,12 +179,11 @@
     <img src="./image-removebg-preview.png" alt="Logo Top Promos" />
   </div>
   <div class="container">
-    <h1>🎉 GRUPO VIP DE PROMOÇÕES 🎉</h1>
+    <h1>🔥 GRUPO DE CUPONS E OFERTAS REAIS 🔥</h1>
     <p>
-      Ganhe acesso exclusivo a <strong>cupons e ofertas reais</strong>, testadas e com
-      <strong>descontos de até 80%</strong> em lojas como Amazon, Shopee e Magalu.
+      Participe de um grupo gratuito no WhatsApp e receba cupons e promoções testadas de lojas como Amazon, Shopee e Magalu.
       <br /><br />
-      <strong>Totalmente gratuito.</strong> Sem spam. Só economia.
+      <strong>É grátis. Sem spam. Só economia de verdade.</strong>
     </p>
 
     <a
@@ -183,7 +191,8 @@
       href="https://chat.whatsapp.com/GyhdbbtVkahHYg0SLwJjgu"
       target="_blank"
       id="btn-whatsapp"
-      > <i class="fab fa-whatsapp"></i> ENTRAR AGORA NO WHATSAPP
+    >
+      <i class="fab fa-whatsapp"></i> ENTRAR DE GRAÇA
     </a>
 
     <div class="subinfo">
@@ -192,7 +201,7 @@
   </div>
 
   <script>
-    // Evento de clique para enviar ao Google Analytics
+    // Evento de clique para Google Analytics
     document.getElementById('btn-whatsapp').addEventListener('click', function() {
       gtag('event', 'click_whatsapp_group', {
         'event_category': 'engagement',
